@@ -1,4 +1,5 @@
 import os
+import time
 
 def run():
     email = "stinabogsti@gmail.com"
@@ -9,7 +10,15 @@ def run():
     os.system(f'git config --global user.email {email}')
     os.system(f'git config --global user.name {name}')
     
-    os.system(f'cd {SendeMappe} && git add . && git commit -m "Nye Målinger" && git pull && git push  ')
+    os.system(f'cd {SendeMappe}')
+    time.sleep(1)
+    os.system('git add .')
+    time.sleep(1)
+    os.system('git commit -m "Nye Målinger"')
+    time.sleep(1)
+    os.system('git pull')
+    time.sleep(1)
+    os.system('git push ')
     
     print("program ended succesfully")
 
