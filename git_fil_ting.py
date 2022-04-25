@@ -7,7 +7,6 @@ def run():
     SendeMappe= '/home/pi/Documents/SendeMappe'
     os.system(f'git config --global user.email {email}')
     os.system(f'git config --global user.name {name}')
-    os.system(f'git remote add origin {address}')
     os.system(f'cd {SendeMappe} && git add . && git commit -m "Nye Målinger" && git pull && git push')
     
     print("program ended succesfully")
